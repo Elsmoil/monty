@@ -18,8 +18,8 @@ void f_muli(stack_t **head, unsigned int counter)
 	}
 	if (len < 2)
 	{
-		f_printf(stderr, "L%d: can't mul, stack too short\n", counter);
-		f_close(bus.file);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", counter);
+		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
